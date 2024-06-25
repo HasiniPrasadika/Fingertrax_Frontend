@@ -1,0 +1,193 @@
+.addlec {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  background-color: rgb(236, 236, 236);
+}
+
+.add_lecturer-container {
+  position: relative;
+  display: flex;
+  width: 99%;
+  border-radius: 10px;
+  background-color: white;
+  margin: 1% 0.5% 0.5% 0.5%;
+  padding: 0;
+  flex-direction: column;
+
+}
+
+.lec-navigate {
+  position: relative;
+  display: flex;
+  opacity: "0.8";
+  margin: 1%;
+  font-size: 12px;
+  width: 98%;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.lecturer-details {
+  display: flex;
+  background-color: #e8f4ff;
+  margin: 2%;
+  border-radius: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lecture-photo-area {
+  margin: 1%;
+  position: relative;
+  width: 38%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-area-name {
+  font-size: 20px;
+
+  display: flex;
+  position: relative;
+  text-align: center;
+  color: #012970;
+  font-family: "Poppins", sans-serif;
+  margin: 5%;
+}
+
+.profile-photo-preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  position: relative;
+  margin: 2%;
+  overflow: hidden;
+  
+}
+
+.fingerprint-enroll {
+  position: relative;
+  margin: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.lecturer-add-form {
+  position: relative;
+  margin: 1%;
+  width: 75%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 963px) {
+  .lecture-photo-area {
+    width: 32%;
+  }
+
+  .lecturer-add-form {
+    width: 74%;
+    margin: 0.5%;
+  }
+
+  .profile-photo-preview {
+    width: 120px;
+    height: 120px;
+  }
+
+}
+
+
+@media (max-width: 899px) {
+  .lecture-photo-area {
+    width: 28%;
+  }
+
+  .lecturer-add-form {
+    width: 78%;
+    margin: 0.5%;
+  }
+
+  .profile-photo-preview {
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+
+@media (max-width: 771px) {
+
+
+  .profile-photo-preview {
+    width: 150px;
+    height: 150px;
+  }
+
+}
+
+@media (max-width: 678px) {
+
+
+  .profile-photo-preview {
+    width: 120px;
+    height: 120px;
+  }
+
+}
+@media (max-width: 540px) {
+
+
+  .profile-photo-preview {
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .lecturer-details{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lecture-photo-area {
+    width: 100%;
+    margin: 0% 5% 0% 5%;
+  }
+
+  .lecturer-add-form {
+    width: 100%;
+    
+  }
+  .profile-photo-preview {
+    width: 150px;
+    height: 150px;
+  }
+
+}
+
+@media (max-width:430px) {
+  .dep-add-table {
+    position: relative;
+    min-width: 430px;
+    overflow-x: scroll;
+
+  }
+  .form-control{
+    font-size: 14px;
+  }
+}
