@@ -25,7 +25,7 @@ const AddDepartment = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8070/api/departments/getalldep")
+      .get("https://server-eta-gules.vercel.app/api/departments/getalldep")
       .then((response) => {
         setDepartments(response.data);
       })
@@ -48,7 +48,7 @@ const AddDepartment = () => {
     if (editMode) {
       // If in edit mode, update the existing department
       axios
-        .put(`http://localhost:8070/api/departments/updatedep/${currentDepartmentId}`, {
+        .put(`https://server-eta-gules.vercel.app/api/departments/updatedep/${currentDepartmentId}`, {
           depCode,
           depName,
           noOfStu,
@@ -70,7 +70,7 @@ const AddDepartment = () => {
     } else {
       // If not in edit mode, add a new department
       axios
-        .post("http://localhost:8070/api/departments/adddep", {
+        .post("https://server-eta-gules.vercel.app/api/departments/adddep", {
           depCode,
           depName,
           noOfStu,
@@ -115,7 +115,7 @@ const AddDepartment = () => {
   const deleteDepartment = (id) => {
     if (window.confirm("Are you sure you want to delete this department?")) {
       axios
-        .post("http://localhost:8070/api/departments/depdel", { id }) // Include the id in the URL
+        .post("https://server-eta-gules.vercel.app/api/departments/depdel", { id }) // Include the id in the URL
         .then((response) => {
           setSMessage("Department Deleted successfully!");
           setTimeout(() => {

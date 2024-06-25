@@ -20,7 +20,7 @@ const AttendanceRecord = () => {
     const fetchAttendanceRecords = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:8070/api/attendance/getmyattendance",
+          "https://server-eta-gules.vercel.app/api/attendance/getmyattendance",
           {
             moduleCode: module.modCode,
           }

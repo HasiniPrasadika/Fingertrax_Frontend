@@ -33,7 +33,7 @@ const AddLecturer = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8070/api/departments/getalldep")
+      .get("https://server-eta-gules.vercel.app/api/departments/getalldep")
       .then((response) => {
         setDepartments(response.data);
       })
@@ -44,7 +44,7 @@ const AddLecturer = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8070/api/users/getlecusers")
+      .get("https://server-eta-gules.vercel.app/api/users/getlecusers")
       .then((response) => {
         setLecusers(response.data);
         setFilteredLecusers(response.data);
@@ -134,7 +134,7 @@ const AddLecturer = () => {
         } else {
           axios
             .put(
-              `http://localhost:8070/api/users/updateuser/${currentLecturerID}`,
+              `https://server-eta-gules.vercel.app/api/users/updateuser/${currentLecturerID}`,
               requestData
             )
             .then((response) => {
@@ -174,7 +174,7 @@ const AddLecturer = () => {
           return;
         }
         axios
-          .post("http://localhost:8070/api/users/reglec", requestData)
+          .post("https://server-eta-gules.vercel.app/api/users/reglec", requestData)
           .then((response) => {
             setSMessage("Lecturer added successfully!");
             setTimeout(() => {
@@ -215,7 +215,7 @@ const AddLecturer = () => {
   const deleteLecturer = (id) => {
     if (window.confirm("Are you sure you want to delete this lecturer?")) {
       axios
-        .post("http://localhost:8070/api/users/myd", { id }) // Include the id in the URL
+        .post("https://server-eta-gules.vercel.app/api/users/myd", { id }) // Include the id in the URL
         .then((response) => {
           setSMessage("Lecturer Deleted successfully!");
           setTimeout(() => {

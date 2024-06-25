@@ -16,7 +16,7 @@ const StudentDashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8070/api/modules/getallmod")
+      .get("https://server-eta-gules.vercel.app/api/modules/getallmod")
       .then((response) => {
         const filteredModules = response.data.filter((module) =>
           module.students.some((student) => student.regNo === userInfo.regNo)

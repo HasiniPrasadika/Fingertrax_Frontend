@@ -36,7 +36,7 @@ const CreateModule = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8070/api/departments/getalldep")
+      .get("https://server-eta-gules.vercel.app/api/departments/getalldep")
       .then((response) => {
         setDepartments(response.data);
       })
@@ -46,7 +46,7 @@ const CreateModule = () => {
   }, [departments]);
   useEffect(() => {
     axios
-      .get("http://localhost:8070/api/modules/getallmod")
+      .get("https://server-eta-gules.vercel.app/api/modules/getallmod")
       .then((response) => {
         const filteredModules = response.data.filter(
           (module) => module.modCoordinator.userName === userInfo.userName
@@ -71,7 +71,7 @@ const CreateModule = () => {
 
     if(editMode){
       axios
-      .put(`http://localhost:8070/api/modules/updatemod/${currentModuleId}`, {
+      .put(`https://server-eta-gules.vercel.app/api/modules/updatemod/${currentModuleId}`, {
         modCode,
         modName,
         enrolKey,
@@ -95,7 +95,7 @@ const CreateModule = () => {
 
     }else{
       axios
-        .post("http://localhost:8070/api/modules/addmod", {
+        .post("https://server-eta-gules.vercel.app/api/modules/addmod", {
           modCode,
           modName,
           enrolKey,
@@ -163,7 +163,7 @@ const CreateModule = () => {
   const deleteModule = (id) => {
     if (window.confirm("Are you sure you want to delete this module?")) {
       axios
-        .post("http://localhost:8070/api/modules/moddel", { id }) // Include the id in the URL
+        .post("https://server-eta-gules.vercel.app/api/modules/moddel", { id }) // Include the id in the URL
         .then((response) => {
           setSMessage("Module Deleted successfully!");
           setTimeout(() => {

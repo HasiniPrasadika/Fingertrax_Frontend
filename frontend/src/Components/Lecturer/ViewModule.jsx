@@ -68,7 +68,7 @@ const ViewModule = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8070/api/attendance/getmyattendance",
+        "https://server-eta-gules.vercel.app/api/attendance/getmyattendance",
         {
           moduleCode: module.modCode,
         }
@@ -145,7 +145,7 @@ const ViewModule = () => {
       console.log(daily);
       try {
         axios
-          .post("http://localhost:8070/api/attendance/dailyattendance", {
+          .post("https://server-eta-gules.vercel.app/api/attendance/dailyattendance", {
             moduleCode: moduleCod,
             date: dayjs(daily).format("YYYY-MM-DD"),
           })
@@ -208,7 +208,7 @@ const ViewModule = () => {
       if (overallState == "Overall") {
         try {
           const response = await axios.post(
-            "http://localhost:8070/api/attendance/getmyattendance",
+            "https://server-eta-gules.vercel.app/api/attendance/getmyattendance",
             {
               moduleCode: module.modCode,
             }
@@ -278,7 +278,7 @@ const ViewModule = () => {
       } else {
         try {
           axios
-            .post("http://localhost:8070/api/attendance/dailyattendance", {
+            .post("https://server-eta-gules.vercel.app/api/attendance/dailyattendance", {
               moduleCode: moduleCod,
               date:  dayjs(daily).format("YYYY-MM-DD"),
             })
@@ -446,7 +446,7 @@ const ViewModule = () => {
           const attenData = snapshot.val();
           try {
             axios
-              .post("http://localhost:8070/api/modules/getenrollstu", {
+              .post("https://server-eta-gules.vercel.app/api/modules/getenrollstu", {
                 modCode: moduleCod,
               })
               .then((response) => {
@@ -535,7 +535,7 @@ const ViewModule = () => {
                 }
 
                 axios
-                  .post("http://localhost:8070/api/attendance/addattendance", {
+                  .post("https://server-eta-gules.vercel.app/api/attendance/addattendance", {
                     enrolledStudents: updatedEnrolledStudents, // Pass updatedEnrolledStudents here
                     moduleCode,
                     startTime,

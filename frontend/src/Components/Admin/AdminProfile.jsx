@@ -45,7 +45,7 @@ const AdminProfile = () => {
 
       // Call backend API to change password
       const response = await axios.post(
-        "http://localhost:8070/api/users/admin-change-password",
+        "https://server-eta-gules.vercel.app/api/users/admin-change-password",
         {
           userName,
           currentPassword,

@@ -36,7 +36,7 @@ export const loadUser = () => async (dispatch) => {
       };
   
       const { data } = await axios.post(
-        "http://localhost:8070/api/users/login",
+        "https://server-eta-gules.vercel.app/api/users/login",
         { userName, password },
         config
       );
@@ -69,7 +69,7 @@ export const loadUser = () => async (dispatch) => {
       };
   
       const { data } = await axios.post(
-        "http://localhost:8070/api/users/regadmin",
+        "https://server-eta-gules.vercel.app/api/users/regadmin",
         { userName, password, role},
         config
       );

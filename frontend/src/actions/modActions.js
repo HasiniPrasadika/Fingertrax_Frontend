@@ -22,7 +22,7 @@ import {
         },
       };
   
-      const { data } = await axios.get("http://localhost:8070/api/modules/getallmod", config);
+      const { data } = await axios.get("https://server-eta-gules.vercel.app/api/modules/getallmod", config);
   
       dispatch({
         type: MODULE_LIST_SUCCESS,
@@ -58,7 +58,7 @@ import {
       };
   
       const { data } = await axios.post(
-        "http://localhost:8070/api/modules/addmod",
+        "https://server-eta-gules.vercel.app/api/modules/addmod",
         { modCode, modName, enrolKey, semester, lectureHours },
         config
       );

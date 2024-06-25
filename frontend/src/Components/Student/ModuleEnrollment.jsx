@@ -12,7 +12,7 @@ const ModuleEnrollment = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8070/api/departments/getalldep")
+      .get("https://server-eta-gules.vercel.app/api/departments/getalldep")
       .then((response) => {
         setDepartments(response.data);
       })

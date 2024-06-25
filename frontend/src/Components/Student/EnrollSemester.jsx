@@ -21,7 +21,7 @@ const EnrollSemester = () => {
     try {
       // Make API call to fetch modules
       const response = await axios.get(
-        "http://localhost:8070/api/modules/getallmod"
+        "https://server-eta-gules.vercel.app/api/modules/getallmod"
       );
       const depName = semesterObject.depName;
       const semester = semesterObject.semester.toString();

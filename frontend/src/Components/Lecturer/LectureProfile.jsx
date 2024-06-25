@@ -31,7 +31,7 @@ const LectureProfile = () => {
       }
 
       axios
-        .post(`http://localhost:8070/api/users/updateimage`, {
+        .post(`https://server-eta-gules.vercel.app/api/users/updateimage`, {
           image,
           username,
         })
@@ -71,7 +71,7 @@ const LectureProfile = () => {
 
       // Call backend API to change password
       const response = await axios.post(
-        "http://localhost:8070/api/users/change-password",
+        "https://server-eta-gules.vercel.app/api/users/change-password",
         {
           username,
           currentPassword,

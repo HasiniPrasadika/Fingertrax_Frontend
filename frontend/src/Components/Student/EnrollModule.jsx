@@ -39,7 +39,7 @@ const EnrollModule = () => {
       const updatedStudents = [...module.students, { regNo: userInfo.regNo }];
 
       axios
-        .put(`http://localhost:8070/api/modules/enrollmodule/${module._id}`, {
+        .put(`https://server-eta-gules.vercel.app/api/modules/enrollmodule/${module._id}`, {
           noOfStu,
           students: updatedStudents,
         })

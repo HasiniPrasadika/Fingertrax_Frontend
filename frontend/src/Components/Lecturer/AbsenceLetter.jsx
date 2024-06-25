@@ -21,7 +21,7 @@ const AbsenceAppicationView = () => {
 
     if (userInfo) {
       axios
-        .get(`http://localhost:8070/api/absenceletters/lecturer/${userInfo.regNo}/letters`)
+        .get(`https://server-eta-gules.vercel.app/api/absenceletters/lecturer/${userInfo.regNo}/letters`)
         .then((response) => {
           setviewLettersLec(response.data);
         })
@@ -36,7 +36,7 @@ const AbsenceAppicationView = () => {
   const handleAccept = (id) => {
     if (window.confirm("Are you sure you want to accept this?")) {
       axios
-      .put(`http://localhost:8070/api/absenceletters/letter/${id}/accept`)
+      .put(`https://server-eta-gules.vercel.app/api/absenceletters/letter/${id}/accept`)
       .then((response) => {
         setviewLettersLec(viewLettersLec.map(letter => letter._id === id ? { ...letter, action: true } : letter));
         setSMessage("Send a message as Accepted!");
@@ -61,7 +61,7 @@ const AbsenceAppicationView = () => {
   const handleReject = (id) => {
     if (window.confirm("Are you sure you want to reject this?")) {
       axios
-      .put(`http://localhost:8070/api/absenceletters/letter/${id}/reject`)
+      .put(`https://server-eta-gules.vercel.app/api/absenceletters/letter/${id}/reject`)
       .then((response) => {
         setviewLettersLec(viewLettersLec.map(letter => letter._id === id ? { ...letter, action: false } : letter));
         setSMessage("Send a message as Rejected!");

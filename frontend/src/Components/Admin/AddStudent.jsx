@@ -40,7 +40,7 @@ const AddStudent = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8070/api/departments/getalldep")
+      .get("https://server-eta-gules.vercel.app/api/departments/getalldep")
       .then((response) => {
         setDepartments(response.data);
       })
@@ -51,7 +51,7 @@ const AddStudent = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8070/api/users/getstuusers")
+      .get("https://server-eta-gules.vercel.app/api/users/getstuusers")
       .then((response) => {
         setStuusers(response.data);
         setFilteredStuusers(response.data);
@@ -125,7 +125,7 @@ const AddStudent = () => {
         } else {
           axios
             .put(
-              `http://localhost:8070/api/users/updatestuuser/${currentStudentID}`,
+              `https://server-eta-gules.vercel.app/api/users/updatestuuser/${currentStudentID}`,
               {
                 userName,
                 fullName,
@@ -156,7 +156,7 @@ const AddStudent = () => {
         }
       } else {
         const existingUsersResponse = await axios.get(
-          "http://localhost:8070/api/users/getstuusers"
+          "https://server-eta-gules.vercel.app/api/users/getstuusers"
         );
         const existingUsers = existingUsersResponse.data;
         const existingFingerprintIDs = existingUsers.map(
@@ -196,7 +196,7 @@ const AddStudent = () => {
           return;
         }
         axios
-          .post("http://localhost:8070/api/users/regstu", {
+          .post("https://server-eta-gules.vercel.app/api/users/regstu", {
             userName,
             password,
             role,
@@ -282,7 +282,7 @@ const AddStudent = () => {
   const deleteStudent = (id, student) => {
     if (window.confirm("Are you sure you want to delete this student?")) {
       axios
-        .post("http://localhost:8070/api/users/myd", { id }) // Include the id in the URL
+        .post("https://server-eta-gules.vercel.app/api/users/myd", { id }) // Include the id in the URL
         .then((response) => {
           set(ref(db, "FingerprintData/"), {
             stuRegNo: student.regNo,

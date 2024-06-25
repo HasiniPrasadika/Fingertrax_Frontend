@@ -138,7 +138,7 @@ describe('Lecture Dashboard', () => {
   //     }
   //   ];
   
-  //   cy.intercept('GET', 'http://localhost:8070/api/modules/getallmod', {
+  //   cy.intercept('GET', 'https://server-eta-gules.vercel.app/api/modules/getallmod', {
   //     statusCode: 200,
   //     body: modulesFixture
   //   }).as('getModules');

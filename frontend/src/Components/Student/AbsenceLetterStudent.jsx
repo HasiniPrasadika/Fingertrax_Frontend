@@ -43,7 +43,7 @@ const AbsenceApplication = () => {
       formData.append("pdf", letters);
 
       axios
-        .post("http://localhost:8070/api/absenceletters/addletter", formData, {
+        .post("https://server-eta-gules.vercel.app/api/absenceletters/addletter", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
@@ -101,7 +101,7 @@ const AbsenceApplication = () => {
     if (userInfo) {
       const encodedRegNo = encodeURIComponent(userInfo.regNo);
       axios
-        .get(`http://localhost:8070/api/absenceletters/getAbsenceStu/${encodedRegNo}`)
+        .get(`https://server-eta-gules.vercel.app/api/absenceletters/getAbsenceStu/${encodedRegNo}`)
         .then((response) => {
           setviewLetters(response.data);
           console.log(response.data)
