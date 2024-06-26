@@ -23,7 +23,8 @@ const Modules = () => {
           <span>
             <GoTriangleRight />
           </span>
-          Module Enrollment / Department / Semester / Module
+          <Link to= "/dashboard/student_enrollment" className="dashboard-link">Module Enrollment /</Link>
+           Department / Semester 
         </div>
         <div className="en-topic">
           <span>Module</span>

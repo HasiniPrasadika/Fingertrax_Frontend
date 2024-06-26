@@ -259,22 +259,22 @@ const AbsenceApplication = () => {
         <h4 className="topic-style-ab">Excuse Applications</h4>
       </div>
       <div className="excuse-application">
-        <div className="table-design">
-          <table class="table">
-            <thead style={{ backgroundColor: "#dfeaf5" }}>
+        <div className="abs-table-wrapper">
+          <table class="abs-add-table">
+            <thead style={{ backgroundColor: "#dfeaf5", borderRadius: 15 }}>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Absence Module</th>
-                <th scope="col">Absence Date</th>
-                <th scope="col">Absence For</th>
-                <th scope="col">Application form</th>
-                <th scope="col">Action</th>
+                <th scope="col" style={{ width: "5px", textAlign: "center" }}>#</th>
+                <th scope="col" style={{ width: "5px" }}>Absence Module</th>
+                <th scope="col" style={{ width: "5px", textAlign: "center" }}>Absence Date</th>
+                <th scope="col" style={{ width: "5px", textAlign: "center" }}>Absence For</th>
+                <th scope="col"style={{ width: "5px", textAlign: "center" }}>Application form</th>
+                <th scope="col" style={{ width: "5px", textAlign: "center" }}>Action</th>
               </tr>
             </thead>
             <tbody>
               {viewLetters.map((letter, index) => (
                 <tr key={letter._id}>
-                  <th scope="row">{index + 1}</th>
+                  <th style={{ textAlign: "center" }} scope="row">{index + 1}</th>
 
                   <td>{letter.absModName}</td>
                   <td>{letter.absDate}</td>

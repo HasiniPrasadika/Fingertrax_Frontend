@@ -33,7 +33,7 @@ const ModuleEnrollment = () => {
           <span>
             <GoTriangleRight />
           </span>
-          Module Enrollment / Department
+          Module Enrollment
         </div>
         <div className="en-topic">
           <span>Department</span>
