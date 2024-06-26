@@ -119,9 +119,9 @@ const AbsenceAppicationView = () => {
               <th scope="col" style={{ width: "5px", textAlign: "center" }}>
                 #
               </th>
-                <th scope="col" style={{ width: "5px", textAlign: "center" }}>Student Name</th>
+                <th scope="col" style={{ width: "5px" }}>Student Name</th>
                 <th scope="col" style={{ width: "5px", textAlign: "center" }}>Registration No.</th>
-                <th scope="col" style={{ width: "5px", textAlign: "center" }}>Absence Module</th>
+                <th scope="col" style={{ width: "5px"}}>Absence Module</th>
                 <th scope="col" style={{ width: "5px", textAlign: "center" }}>Absence Date</th>
                 <th scope="col" style={{ width: "5px", textAlign: "center" }}>Absence For</th>
                 <th scope="col" style={{ width: "5px", textAlign: "center" }}>Excuse Application</th>
